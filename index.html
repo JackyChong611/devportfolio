@@ -209,6 +209,58 @@
             </div>
         </div>
 
+        <!-- Real-World COVID-19 Vaccination & Mortality Analysis -->
+            <div class="project shadow-large">
+            <div class="project-info">
+                <h3>Real-World COVID-19 Vaccination &amp; Mortality Analysis</h3>
+
+                <!-- 3-line project description -->
+                <p>
+               Linked UK-ONS mortality tables (Apr&nbsp;2021 – May&nbsp;2023) to vaccination
+            status to test whether real-world all-cause deaths mirror trial-based efficacy.  
+            Monthly dose-stratified rate-ratios sometimes exceeded 1.0, but an
+            over-dispersion–adjusted Negative-Binomial model confirms a net protective
+            effect across every age band.  
+            Bias audits (health-vaccinee, indication, harvesting, unvaccinated under-count)
+            highlight the complexity of interpreting observational vaccine data.
+                </p>
+
+                <!-- HEOR-focused bullets -->
+                <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
+                <li><strong>Why it matters for HEOR&nbsp;—</strong> Dose-level hazard ratios
+                    feed cost-effectiveness and budget-impact scenarios for booster policies
+                    (e.g., RR&nbsp;curve ⇢ Δ QALY, Δ £ per cohort).</li>
+
+                <li><strong>Generative-AI workflow&nbsp;—</strong> <em>GPT-4</em> drafted
+                    Poisson → NB regression code and bias-audit checklists, trimming
+                    analysis time by ~40 %.</li>
+
+                <li><strong>Key findings&nbsp;—</strong> Third/​fourth doses cut all-cause
+                    mortality 20–35 % (RR&nbsp;&lt;&nbsp;0.8) in ages 40-79. Elevated risk
+                    in early first-dose cohorts driven by indication bias.</li>
+                </ul>
+
+                <!-- Techniques grid -->
+                <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:0.95em;">
+                <div><strong>Data wrangling:</strong> R tidyverse, readxl</div>
+                <div><strong>Stats:</strong> Rate-ratio calc, Poisson &amp; NB GLM</div>
+                <div><strong>Bias audit:</strong> healthy-vaccinee, indication, harvesting</div>
+                <div><strong>Visuals:</strong> ggplot2 box-plots, log-mortality curves</div>
+                </div>
+
+                <a href="https://github.com/JackyChong611/COVID19_Mortality_Analysis"
+                target="_blank" class="btn" style="margin-top:18px;">View on GitHub</a>
+            </div>
+                        <div class="project-image">
+            <a href="images/Negative Binomial ONS Covid.png" target="_blank">
+                <img src="images/NB_coefficients_thumb.png"
+                    alt="Negative-Binomial coefficients by age group"
+                    style="max-width:220px;border-radius:6px;">
+            </a>
+            </div>
+            </div>
+
             <!-- Twitter Sentiment Analysis with Natural Language Processing -->
             <div class="project shadow-large no-image">
                 <div class = 'project-info'>
