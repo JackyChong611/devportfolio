@@ -113,6 +113,127 @@
     <h2 class="heading">Projects</h2>
     <div class="container">
         <div class="row">
+
+        <!-- Multimodal Housing-Price Prediction -->
+<div class="project shadow-large">
+    <div class="project-info">
+        <h3>Multimodal Housing-Price Prediction</h3>
+        <p>
+        Developed a fused neural network that combines Rightmove tabular features, 0.5-mile crime
+        statistics, listing text, property photographs, satellite tiles and Street View images to predict
+        London sale prices.
+        On 41,835 listings and 5-fold cross-validation, the full visual stack
+        (<strong>TRC + PI + SI + SV</strong>) cuts Test RMSE to <strong>£247 k</strong>
+        (−41.6 % vs. tabular-only TR) and delivers the highest R² (0.728).
+        </p>
+
+        <!-- Equity-research-oriented bullets -->
+        <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
+        <li><strong>Why it matters for equity research&nbsp;—</strong>
+            The same multimodal pipeline can ingest unstructured pharma data (e.g.&nbsp;clinical-site
+            photos, protocol text), letting analysts attach location-specific alpha to valuation models.</li>
+        </ul>
+
+        <li><strong>Performance Review</strong>
+            <ul style="margin:4px 0 0 1em; list-style-type: circle; font-size:0.92em;">
+                <li>Crime stats (<em>TR → TRC</em>) trim RMSE by <strong>6.5&nbsp;%</strong></li>
+                <li>+ Text (<em>TRC + TD</em>) ⇒ <strong>−18.2&nbsp;%</strong></li>
+                <li>+ Photos (<em>TRC + PI</em>) ⇒ <strong>−27.2&nbsp;%</strong></li>
+                <li>+ Satellite (<em>TRC + PI + SI</em>) ≈ <strong>−26.5&nbsp;%</strong></li>
+                <li>+ Street&nbsp;View (<em>TRC + PI + SI + SV</em>) delivers the biggest gain: <strong>−41.6&nbsp;%</strong></li>
+                <li>+ Full stack + text (<em>TRC + PI + SI + SV + TD</em>) ⇒
+                    <span style="color:#c0392b; font-weight:bold;">-22&nbsp;%</span></li>
+            </ul>
+
+</li>
+
+
+        <!-- Techniques grid -->
+        <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; font-size:0.95em;">
+        <div><strong>Data preprocessing:</strong> Pandas, Google Static Map API, Kernel Density Estimation (KDE)</div>
+        <div><strong>Modelling:</strong> MLP, CNN, ResNet19, BERT </div>
+        <div><strong>Benchmarks:</strong> XGBoost, GBM, RF, Linear Regression</div>
+        </div>
+
+        <a href="https://github.com/JackyChong611/Multimodal_housing-price-prediction-in-london.git"
+           target="_blank" class="btn">View on GitHub</a>
+    </div>
+
+    <!-- Charts side-by-side -->
+    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+        <img src="images/rmse_test_line.png"
+            alt="RMSE across model variants"
+            style="flex:1 1 48%; max-width:48%; height:auto; border-radius:8px;">
+
+        <img src="images/r2_test_line.png"
+            alt="R² across model variants"
+            style="flex:1 1 48%; max-width:48%; height:auto; border-radius:8px;">
+    </div>
+
+        <!-- COVID‑19 Vaccination & Mortality Analysis (ONS England) -->
+        <div class="project shadow-large">
+        <div class="project-info">
+        <h3>ONS Vaccination Mortality Study</h3>
+        
+        <p>
+        Analysed UK Office for National Statistics data (Apr&nbsp;2021 – May&nbsp;2023) to
+        quantify how vaccination status relates to <em>all‑cause</em> mortality. Rate‑ratio
+        calculations and Negative‑Binomial regression were run across seven age
+        bands and four dose levels after excluding COVID‑19‑specific deaths.
+        </p>
+
+        <ul style="margin-left:0;padding-left:1em;line-height:1.45;">
+
+        <li><strong>Why it’s relevant for equity research —</strong> Demonstrates my
+        ability to ingest large public‑health datasets, apply rigorous
+        epidemiological methods, and translate findings into clear signals —
+        the same skills required to work with Symphony, EvaluatePharma or FDA
+        data at Intron Health.</li>
+        </ul>
+        <ul style="margin-left:0;padding-left:1em;line-height:1.45;">
+        <li><strong>Key findings —</strong> Third and fourth doses show the strongest
+        protection (RR&nbsp;<1.0). First‑dose spikes are explained by indication and
+        healthy‑vaccinee bias; NB model confirms a statistically significant
+        reduction in mortality for every age group.
+        </li>
+        </ul>
+        <ul style="margin-left:0;padding-left:1em;line-height:1.45;">
+       <li><strong>Dataset handling —</strong> Joined weekly ONS death tables with
+        vaccination cohorts, managed &lt;3 death suppressions, and produced
+        clean analytic frames for RR and GLM workflows.</li>
+        </ul>
+
+        <ul style="margin-left:0;padding-left:1em;line-height:1.45;">
+        <li><strong>Statistical toolkit —</strong> Poisson baseline, over‑dispersion
+        test, Negative‑Binomial GLM; bias‑and‑sensitivity audits (vaccinee,
+        indication, harvesting).</li>
+        </ul>
+
+        <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:0.95em;">
+        <div><strong>Data wrangling:</strong> R tidyverse, readxl</div>
+        <div><strong>Models:</strong> Rate‑Ratio, Poisson &amp; NB GLM</div>
+        <div><strong>Bias checks:</strong> Healthy‑vaccinee, indication, harvesting</div>
+        <div><strong>Visuals:</strong> ggplot2, box &amp; log plots</div>
+        </div>
+
+
+        <a href="https://github.com/JackyChong611/COVID19_Mortality_Analysis" target="_blank" class="btn" style="margin-top:18px;">View on GitHub</a>
+        </div>
+
+
+      <!-- Plot links (no inline images) -->
+    <div class="project-links" style="margin-top:10px;">
+    <a href="images/Negative Binomial ONS Covid.png" target="_blank" style="display:block;margin-bottom:6px;">
+    Negative-Binomial coefficients plot (click to view)
+    </a>
+    <a href="images/Vaccination effect on mortality by age group.jpg" target="_blank" style="display:block;">
+    Vaccination effect on mortality by age group (click to view)
+    </a>
+    </div>
+    </div>
+
           <!-- Spatial Protein-Expression Prediction from Histology -->
         <div class="project shadow-large no-image">
         <div class="project-info">
@@ -129,29 +250,31 @@
             </p>
 
             <!-- Key bullets -->
-            <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
-            <li> <strong>Why it matters for HEOR:</strong> The predicted protein panel
-                becomes low-cost, ready-made inputs for budget-impact and CEA models,
-                enabling fast evaluation of biomarker-guided therapies.</li>
-            <li><strong>Generative-AI workflow&nbsp;—</strong> Used <strong>Claude</strong> to
-            scaffold feature-engineering scripts and literature matrices,
-            trimming data-to-prototype time by ~50 %.</li>
-            <li><strong>Result&nbsp;—</strong> Classical baseline (<em>PCA + OLS / Random Forest</em>)
-            averaged Spearman&nbsp;ρ = 0.45; fine-tuned <strong>ResNet50</strong> lifted this
-            to ρ = 0.72, and flagship biomarker CD11b reached ρ ≈ 0.66—strong enough for
-            scenario analyses.</li>
-            <li> <strong>Repro —</strong> Python Markdown + GitHub Actions auto-rebuild to meet NICE transparency
-                guidance.</li>
-            </ul>
+    <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
 
-            <!-- Techniques -->
-            <h4 style="margin:20px 0 6px;">Techniques Used</h4>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; font-size:0.95em;">
-            <div><strong>Pre-proc:</strong> RGB → HED, colour norm, patches</div>
-            <div><strong>Classical ML:</strong> RF, SVR, OLS + PCA</div>
-            <div><strong>Deep Learning:</strong> PyTorch ResNet50 TL, GroupKFold</div>
-            <div><strong>Metrics:</strong> RMSE, r, ρ, R²</div>
-            </div>
+      <li><strong>Result&nbsp;—</strong>
+          ResNet-50 raises Spearman&nbsp;ρ from <strong>0.45 → 0.72</strong>
+          (flagship marker <em>CD11b</em> ρ ≈ 0.66), giving statistically robust inputs
+          for scenario and sensitivity tables.</li>
+          </ul>
+          <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
+      <li><strong>Generative-AI workflow&nbsp;—</strong>
+          Used Claude to autogenerate feature-engineering templates and lit-review
+          matrices, halving prototype time—evidence of rapid-iteration chops prized
+          in a boutique setting.</li>
+          </ul>
+
+
+
+    <!-- Techniques grid -->
+    <h4 style="margin:20px 0 6px;">Techniques Used</h4>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px 14px; font-size:0.95em;">
+      <div><strong>Pre-proc:</strong> RGB → HED, stain-norm, patching</div>
+      <div><strong>Classical ML:</strong> RF, SVR, OLS + PCA</div>
+      <div><strong>Deep Learning:</strong> ResNet-50 TL, GroupKFold CV</div>
+      <div><strong>Metrics:</strong> RMSE, r, ρ, R²</div>
+    </div>
+
 
             <a href="https://github.com/JackyChong611/Healthcare_Protein_Expression"
             target="_blank" class="btn" style="margin-top:18px;">View on GitHub</a>
@@ -174,16 +297,12 @@
 
                 <!-- HEOR-oriented bullets -->
                 <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
-                <li><strong>Why it matters for HEOR&nbsp;—</strong> Dissatisfaction impacts
-                    service uptake, adherence and political feasibility of funding scenarios;
-                    modelled probabilities can be plugged into cost-effectiveness or budget-impact
-                    sensitivity analyses.</li>
-
                 <li><strong>Key findings&nbsp;—</strong> Labour identifiers blame
                     under-funding &amp; staffing; Conservatives cite inefficiency &amp; waste;
                     unaffiliated focus on waiting times.  Age 65+ and employment status are
                     independent predictors across all models.</li>
-
+                </ul>
+                <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
                 <li><strong>Model export&nbsp;—</strong> Coefficient tables auto-export to
                     CSV so analysts can drop them into R or Python simulation frameworks
                     (e.g., uptake curves, utility decrements, scenario weights).</li>
@@ -209,57 +328,7 @@
             </div>
         </div>
 
-        <!-- Real-World COVID-19 Vaccination & Mortality Analysis -->
-            <div class="project shadow-large">
-            <div class="project-info">
-                <h3>Real-World COVID-19 Vaccination &amp; Mortality Analysis</h3>
-
-                <!-- 3-line project description -->
-                <p>
-               Linked UK-ONS mortality tables (Apr&nbsp;2021 – May&nbsp;2023) to vaccination
-            status to test whether real-world all-cause deaths mirror trial-based efficacy.  
-            Monthly dose-stratified rate-ratios sometimes exceeded 1.0, but an
-            over-dispersion–adjusted Negative-Binomial model confirms a net protective
-            effect across every age band.  
-            Bias audits (health-vaccinee, indication, harvesting, unvaccinated under-count)
-            highlight the complexity of interpreting observational vaccine data.
-                </p>
-
-                <!-- HEOR-focused bullets -->
-                <ul style="margin-left:0; padding-left:1em; line-height:1.45;">
-                <li><strong>Why it matters for HEOR&nbsp;—</strong> Dose-level hazard ratios
-                    feed cost-effectiveness and budget-impact scenarios for booster policies
-                    (e.g., RR&nbsp;curve ⇢ Δ QALY, Δ £ per cohort).</li>
-
-                <li><strong>Generative-AI workflow&nbsp;—</strong> <em>GPT-4</em> drafted
-                    Poisson → NB regression code and bias-audit checklists, trimming
-                    analysis time by ~40 %.</li>
-
-                <li><strong>Key findings&nbsp;—</strong> Third/​fourth doses cut all-cause
-                    mortality 20–35 % (RR&nbsp;&lt;&nbsp;0.8) in ages 40-79. Elevated risk
-                    in early first-dose cohorts driven by indication bias.</li>
-                </ul>
-
-                <!-- Techniques grid -->
-                <h4 style="margin:20px 0 6px;">Techniques Used</h4>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;font-size:0.95em;">
-                <div><strong>Data wrangling:</strong> R tidyverse, readxl</div>
-                <div><strong>Stats:</strong> Rate-ratio calc, Poisson &amp; NB GLM</div>
-                <div><strong>Bias audit:</strong> healthy-vaccinee, indication, harvesting</div>
-                <div><strong>Visuals:</strong> ggplot2 box-plots, log-mortality curves</div>
-                </div>
-
-                <a href="https://github.com/JackyChong611/COVID19_Mortality_Analysis"
-                target="_blank" class="btn" style="margin-top:18px;">View on GitHub</a>
-            </div>
-                        <div class="project-image">
-            <a href="images/Negative Binomial ONS Covid.png" target="_blank">
-                <img src="images/NB_coefficients_thumb.png"
-                    alt="Negative-Binomial coefficients by age group"
-                    style="max-width:220px;border-radius:6px;">
-            </a>
-            </div>
-            </div>
+        
 
             <!-- Twitter Sentiment Analysis with Natural Language Processing -->
             <div class="project shadow-large no-image">
@@ -282,25 +351,7 @@
     <img src="images/f1_score.png" alt="Sentiment Analysis F1 Score Graph"style="max-width: 100%; border-radius: 8px; margin-top: 10px;">
                 </div>
             </div>
-            <!-- End Twitter Sentiment Analysis Project -->
-            <!-- COVID-19 Vaccination and Mortality Analysis Project (No Image) -->
-            <div class="project shadow-large no-image">
-                <div class="project-info">
-                    <h3>Real-World COVID-19 Vaccination and Mortality Analysis</h3>
-                    <p>
-                        This study analyzes the relationship between vaccination status and overall mortality in England from April 2021 to May 2023, using publicly available data from the UK Office for National Statistics (ONS).
-                        The study evaluates potential biases and employs statistical models to assess vaccine effectiveness.
-                    </p>
-                    <ul>
-                        <li>Utilized R for data cleaning, visualization, and Negative Binomial regression to assess overdispersion.</li>
-                        <li>Analyzed real-world COVID-19 vaccination effects on all-cause mortality.</li>
-                        <li>Investigated biases such as underestimation, health-vaccine bias, and indication bias.</li>
-                        <li>Demonstrated the complexity of interpreting observational vaccine data.</li>
-                    </ul>
-                    <a href="https://github.com/Jacky110601/covid19-vaccination-analysis" target="_blank" class="btn">View on GitHub</a>
-                </div>
-            </div>
-
+            <!-- End Twitter Sentiment Analysis Project --> 
             <!-- Web Scraping Project -->
             <div class="project shadow-large no-image">
                 <div class="project-info">
